@@ -77,6 +77,62 @@
             color: #aaa;
             font-size: 14px;
         }
+        .sidebar {
+            width: 60px;
+            background: #1c1c1c;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+            overflow: hidden;
+            transition: width 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 0;
+            left: 0;
+            padding-top: 80px;
+        }
+        .sidebar:hover {
+            width: 250px;
+        }
+        .sidebar h3 {
+            display: none;
+        }
+        .sidebar:hover h3 {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            display: block;
+            color: #ff8c00;
+            text-decoration: none;
+            padding: 10px 0;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+            color: #ffa500;
+        }
+        .content {
+            margin-left: 80px;
+            padding: 100px 20px;
+            max-width: 900px;
+        }
+        .charter {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+        .note {
+            color: yellow;
+            font-weight: bold;
+        }
     </style>
     <script>
         function scrollToChapter(id) {
