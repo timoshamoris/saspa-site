@@ -12,7 +12,6 @@
             background-color: #121212;
             color: white;
             display: flex;
-            flex-direction: column;
         }
         .header {
             font-size: 36px;
@@ -20,68 +19,19 @@
             padding: 20px;
             background: #1c1c1c;
             text-align: center;
-        }
-        .nav {
-            background: #222;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
             width: 100%;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 10px 15px;
-            transition: transform 0.3s, background 0.3s, color 0.3s;
-            border-radius: 5px;
-            position: relative;
-            overflow: hidden;
-        }
-        .nav a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 140, 0, 0.5);
-            transition: left 0.3s ease-in-out;
-        }
-        .nav a:hover::before {
-            left: 0;
-        }
-        .nav a:hover {
-            background: #ff8c00;
-            color: black;
-            transform: scale(1.1);
-        }
-        .content {
-            display: flex;
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        .charter-container {
-            flex: 2;
-            padding: 20px;
-            text-align: left;
-            max-width: 800px;
-        }
-        .charter {
-            background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
-            line-height: 1.6;
         }
         .sidebar {
-            flex: 1;
+            width: 250px;
             background: #1c1c1c;
             padding: 20px;
-            text-align: left;
-            max-width: 250px;
+            position: fixed;
+            height: 100%;
+            overflow: hidden;
+            transition: width 0.3s;
+        }
+        .sidebar:hover {
+            width: 300px;
         }
         .sidebar h3 {
             margin-bottom: 10px;
@@ -90,10 +40,24 @@
             display: block;
             color: #ff8c00;
             text-decoration: none;
-            padding: 5px 0;
+            padding: 10px 0;
+            transition: color 0.3s;
         }
         .sidebar a:hover {
             text-decoration: underline;
+            color: #ffa500;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            flex-grow: 1;
+            max-width: 900px;
+        }
+        .charter {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            line-height: 1.6;
         }
         .warning {
             color: red;
@@ -104,47 +68,41 @@
             font-weight: bold;
         }
     </style>
+    <script>
+        function scrollToChapter(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </head>
 <body>
-    <div class="header">Структура SASPA</div>
-    <div class="nav">
-        <a href="index.html">Главная</a>
-        <a href="employment.html">Трудоустройство</a>
-        <a href="rules.html">Устав</a>
-        <a href="legal_rehab.html">Юридическая Реабилитация</a>
-        <a href="doctrine.html">Доктрина наказаний</a>
-        <a href="visits.html">Посещения</a>
-        <a href="#" onclick="openModal()">Перейти к заявке</a>
+    <div class="sidebar">
+        <h3>Навигация</h3>
+        <a href="#" onclick="scrollToChapter('chapter1')">Глава 1</a>
+        <a href="#" onclick="scrollToChapter('chapter2')">Глава 2</a>
+        <a href="#" onclick="scrollToChapter('chapter3')">Глава 3</a>
+        <a href="#" onclick="scrollToChapter('chapter4')">Глава 4</a>
+        <a href="#" onclick="scrollToChapter('chapter5')">Глава 5</a>
     </div>
     <div class="content">
-        <div class="charter-container">
-            <div class="charter">
-                <h2>Устав SASPA</h2>
-                <h3 id="chapter1">ГЛАВА 1. ОБЩИЕ ПОЛОЖЕНИЯ</h3>
-                <p><strong>Статья 1.1</strong> Устав является главным внутренним документом Федеральной тюрьмы штата Сан-Андреас.</p>
-                <p><strong>Статья 1.2</strong> Устав Федеральной тюрьмы обладает юридической силой, его соблюдение обязательно для всех сотрудников тюрьмы.</p>
-                <p><strong>Статья 1.3</strong> Правовую основу деятельности Федеральной тюрьмы составляют Конституция штата, законы штата, подзаконные акты и прочие нормативно-правовые акты.</p>
-                <p><strong>Статья 1.4</strong> Изменение Устава осуществляет только Начальник тюрьмы.</p>
-                <p><strong>Статья 1.5</strong> Незнание устава не освобождает от ответственности.</p>
-                
-                <h3 id="chapter2">ГЛАВА 2. ОБЯЗАННОСТИ СОТРУДНИКОВ</h3>
-                <p><strong>Статья 2.1</strong> Сотрудники обязаны соблюдать внутренний устав и законодательство штата.</p>
-                <p><strong>Статья 2.2</strong> Обеспечение безопасности всех граждан на территории Федеральной тюрьмы.</p>
-                <p><strong>Статья 2.3</strong> Проведение конвоя задержанных.</p>
-                <p><strong>Статья 2.4</strong> Организация досуга заключенных.</p>
-                <p><strong>Статья 2.5</strong> Ведение отчетности и видеофиксации рабочей смены.</p>
-                
-                <h3 id="chapter3">ГЛАВА 3. ЗАПРЕТЫ ДЛЯ СОТРУДНИКОВ</h3>
-                <p><strong>Статья 3.1</strong> Сотрудникам Федеральной тюрьмы запрещено выходить в отпуск без одобрения его начальства.</p>
-                <p><strong>Статья 3.2</strong> Сотрудникам запрещено причинять физический и возможный психологический вред заключенным без веских на то оснований. <span class="warning">➥При нарушении выдается устный выговор</span></p>
-                <p><strong>Статья 3.3</strong> Сотрудникам запрещено передавать/принимать какие-либо предметы заключенным. <span class="note">Исключение: Сигареты, еда.</span> <span class="warning">➥При нарушении выдается предупреждение</span></p>
-                
-                <h3 id="chapter4">ГЛАВА 4. РАСПОРЯДОК РАБОЧЕГО ДНЯ</h3>
-                <p><strong>Статья 4.1</strong> Работник обязан находиться на рабочем месте...</p>
-                
-                <h3 id="chapter5">ГЛАВА 5. СВИДАНИЯ</h3>
-                <p><strong>Статья 5.1</strong> Сотрудник выше должности «Младший надзиратель» может устраивать свидания...</p>
-            </div>
+        <div class="header">Структура SASPA</div>
+        <div class="charter">
+            <h2>Устав SASPA</h2>
+            <h3 id="chapter1">ГЛАВА 1. ОБЩИЕ ПОЛОЖЕНИЯ</h3>
+            <p><strong>Статья 1.1</strong> Устав является главным внутренним документом Федеральной тюрьмы штата Сан-Андреас.</p>
+            <p><strong>Статья 1.2</strong> Устав Федеральной тюрьмы обладает юридической силой...</p>
+            
+            <h3 id="chapter2">ГЛАВА 2. ОБЯЗАННОСТИ СОТРУДНИКОВ</h3>
+            <p><strong>Статья 2.1</strong> Сотрудники обязаны соблюдать внутренний устав и законодательство штата.</p>
+            
+            <h3 id="chapter3">ГЛАВА 3. ЗАПРЕТЫ ДЛЯ СОТРУДНИКОВ</h3>
+            <p><strong>Статья 3.1</strong> Сотрудникам Федеральной тюрьмы запрещено выходить в отпуск без одобрения его начальства.</p>
+            <p><strong>Статья 3.2</strong> Сотрудникам запрещено причинять физический и возможный психологический вред заключенным без веских на то оснований. <span class="warning">➥При нарушении выдается устный выговор</span></p>
+            
+            <h3 id="chapter4">ГЛАВА 4. РАСПОРЯДОК РАБОЧЕГО ДНЯ</h3>
+            <p><strong>Статья 4.1</strong> Работник обязан находиться на рабочем месте...</p>
+            
+            <h3 id="chapter5">ГЛАВА 5. СВИДАНИЯ</h3>
+            <p><strong>Статья 5.1</strong> Сотрудник выше должности «Младший надзиратель» может устраивать свидания...</p>
         </div>
     </div>
 </body>
