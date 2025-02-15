@@ -3,74 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Структура тюрьмы</title>
+    <title>Структура - SASPA</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: consolas, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #222;
+            background-color: #0d0d0d;
             color: white;
             text-align: center;
         }
         .header {
-            background: url('https://i.imgur.com/8Yv3YQZ.jpg') center/cover no-repeat;
-            padding: 100px;
             font-size: 36px;
             font-weight: bold;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-        }
-        .menu {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            background: #333;
-        }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            padding: 12px 25px;
-            background: #444;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-        .menu a:hover {
-            background: #ffcc00;
-            color: #222;
-            transform: scale(1.1);
+            padding: 50px 20px;
+            background: #1a1a1a;
         }
         .container {
             padding: 40px;
         }
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             padding: 20px;
-            background: #333;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
             transition: transform 0.3s;
         }
         .section:hover {
             transform: translateY(-5px);
         }
+        .cop { background-color: #6a0dad; }
+        .di { background-color: #cc0000; }
+        .psd { background-color: #0033cc; }
+        .dpp { background-color: #e75480; }
+        .hr { background-color: #ffcc00; color: black; }
+        .pa { background-color: #ff6600; }
+        .rd { background-color: #009933; }
     </style>
 </head>
 <body>
-    <div class="header">Структура тюрьмы</div>
-    <div class="menu">
-        <a href="index.html">Главная</a>
-    </div>
+    <div class="header">Структура SASPA</div>
     <div class="container">
-        <div class="section">
-            <h2>Отделы</h2>
-            <p>• Офис начальника Тюрьмы</p>
-            <p>• RD (Разведывательный отдел)</p>
-            <p>• DI (Дисциплинарный отдел)</p>
-            <p>• HR (Отдел кадров)</p>
-            <p>• PSD (Отдел безопасности и охраны)</p>
-            <p>• DPP (Департамент по надзору за заключенными)</p>
+        <div class="section cop">
+            <h2>Chief's Office Prison [COP]</h2>
+            <p>Офис Начальника тюрьмы, отдел в который входит Начальник тюрьмы и его заместители. Главный отдел, которому подчиняются все сотрудники Федеральной тюрьмы.</p>
+        </div>
+        <div class="section di">
+            <h2>Department of Inspection [DI]</h2>
+            <p>Отдел внутренних расследований, функцией которого является наблюдение за соблюдением уставов, нормативно-правовых актов и общепринятых норм сотрудниками Федеральной тюрьмы.</p>
+        </div>
+        <div class="section psd">
+            <h2>Prison Supervisors Department [PSD]</h2>
+            <p>Отдел режима и безопасности, который занимается охраной внешнего и внутреннего периметра федеральной тюрьмы...</p>
+        </div>
+        <div class="section dpp">
+            <h2>Department of Prison Psychiatry [DPP]</h2>
+            <p>Отдел, ответственный за медицинскую составляющую, физическое и психологическое здоровье сотрудников и заключенных Федеральной тюрьмы.</p>
+        </div>
+        <div class="section hr">
+            <h2>Human Resources [HR]</h2>
+            <p>Отдел кадров и обучения персонала, занимаются проведением собеседований, обучением новоприбывших сотрудников...</p>
+        </div>
+        <div class="section pa">
+            <h2>Prison Academy [PA]</h2>
+            <p>Тюремная академия, все новобранцы принятые на работу в Федеральную тюрьму находятся в ней до получения 2 порядкового звания.</p>
+        </div>
+        <div class="section rd">
+            <h2>Юридическая реабилитация [RD]</h2>
+            <p>Отдел заведующий юридическими реабилитациями для граждан штата Сан Андреас.</p>
         </div>
     </div>
 </body>
