@@ -14,10 +14,11 @@
             text-align: center;
         }
         .header {
-            background: url('prison.jpg') center/cover no-repeat;
-            padding: 50px;
-            font-size: 24px;
+            background: url('https://source.unsplash.com/1600x900/?prison') center/cover no-repeat;
+            padding: 100px;
+            font-size: 36px;
             font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
         .menu {
             display: flex;
@@ -30,12 +31,15 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             background: #444;
             border-radius: 5px;
+            transition: all 0.3s ease;
         }
         .menu a:hover {
-            background: #555;
+            background: #ffcc00;
+            color: #222;
+            transform: scale(1.1);
         }
         .container {
             padding: 40px;
@@ -45,6 +49,26 @@
             padding: 20px;
             background: #333;
             border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        .button-link {
+            color: yellow;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid yellow;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        .button-link:hover {
+            background: yellow;
+            color: #222;
         }
     </style>
 </head>
@@ -59,7 +83,7 @@
         <div id="udo" class="section">
             <h2>Заявка на УДО</h2>
             <p>Если вы соответствуете требованиям, вы можете подать заявку на условно-досрочное освобождение.</p>
-            <a href="https://forms.google.com" target="_blank" style="color: yellow;">Перейти к заявке</a>
+            <a class="button-link" href="https://forms.google.com" target="_blank">Перейти к заявке</a>
         </div>
         <div id="structure" class="section">
             <h2>Структура ведомства</h2>
