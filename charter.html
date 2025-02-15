@@ -3,57 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Устав - San Andreas State Prison Authority</title>
+    <title>Устав SASPA</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #222;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
             color: white;
             text-align: center;
         }
-        .menu {
+        .header {
+            font-size: 36px;
+            font-weight: bold;
             padding: 20px;
-            background: #333;
+            background: #1c1c1c;
         }
-        .menu a {
+        .nav {
+            background: #222;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
             font-size: 18px;
-            padding: 12px 25px;
-            background: #444;
+            padding: 10px 15px;
+            transition: transform 0.3s, background 0.3s, color 0.3s;
             border-radius: 5px;
-            transition: 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        .menu a:hover {
-            background: #ffcc00;
-            color: #222;
+        .nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 140, 0, 0.5);
+            transition: left 0.3s ease-in-out;
+        }
+        .nav a:hover::before {
+            left: 0;
+        }
+        .nav a:hover {
+            background: #ff8c00;
+            color: black;
+            transform: scale(1.1);
         }
         .container {
             padding: 40px;
         }
-        .footer {
-            margin-top: 40px;
-            padding: 10px;
-            background: #333;
-            color: #aaa;
+        .charter {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            line-height: 1.6;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="menu">
+    <div class="header">Структура SASPA</div>
+    <div class="nav">
         <a href="index.html">Главная</a>
-        <a href="structure.html">Структура</a>
-        <a href="legal-rehabilitation.html">Юридическая Реабилитация</a>
-        <a href="punishment-doctrine.html">Доктрина наказаний</a>
+        <a href="employment.html">Трудоустройство</a>
+        <a href="rules.html">Устав</a>
+        <a href="legal_rehab.html">Юридическая Реабилитация</a>
+        <a href="doctrine.html">Доктрина наказаний</a>
         <a href="visits.html">Посещения</a>
+        <a href="#" onclick="openModal()">Перейти к заявке</a>
     </div>
     <div class="container">
-        <h1>Устав</h1>
-        <p>Здесь размещается текст устава тюрьмы.</p>
-    </div>
-    <div class="footer">
-        by Timofey Om
+        <div class="charter">
+            <h2>Устав SASPA</h2>
+            <h3>ГЛАВА 1. ОБЩИЕ ПОЛОЖЕНИЯ</h3>
+            <p><strong>Статья 1.1</strong> Устав является главным внутренним документом Федеральной тюрьмы штата Сан-Андреас.</p>
+            <p><strong>Статья 1.2</strong> Устав Федеральной тюрьмы обладает юридической силой, его соблюдение обязательно для всех сотрудников тюрьмы.</p>
+            <p><strong>Статья 1.3</strong> Правовую основу деятельности Федеральной тюрьмы составляют Конституция штата, законы штата, подзаконные акты и прочие нормативно-правовые акты.</p>
+            <p><strong>Статья 1.4</strong> Изменение Устава осуществляет только Начальник тюрьмы.</p>
+            <p><strong>Статья 1.5</strong> Незнание устава не освобождает от ответственности.</p>
+            
+            <h3>ГЛАВА 2. ОБЯЗАННОСТИ СОТРУДНИКОВ</h3>
+            <p><strong>Статья 2.1</strong> Сотрудники обязаны соблюдать внутренний устав и законодательство штата.</p>
+            <p><strong>Статья 2.2</strong> Обеспечение безопасности всех граждан на территории Федеральной тюрьмы.</p>
+            <p><strong>Статья 2.3</strong> Проведение конвоя задержанных.</p>
+            <p><strong>Статья 2.4</strong> Организация досуга заключенных.</p>
+            <p><strong>Статья 2.5</strong> Ведение отчетности и видеофиксации рабочей смены.</p>
+            
+            <h3>ГЛАВА 3. ЗАПРЕТЫ</h3>
+            <p><strong>Статья 3.1</strong> Запрещено покидать тюрьму в рабочее время без оснований.</p>
+            <p><strong>Статья 3.2</strong> Запрещено причинять вред заключенным без веских оснований.</p>
+            <p><strong>Статья 3.3</strong> Запрещено использовать служебный транспорт в личных целях.</p>
+            <p><strong>Статья 3.4</strong> Запрещено нарушать субординацию и разжигать конфликты.</p>
+            
+            <h3>ГЛАВА 4. РАСПОРЯДОК РАБОЧЕГО ДНЯ</h3>
+            <p><strong>Статья 4.1</strong> Работник обязан находиться на рабочем месте согласно расписанию.</p>
+            <p><strong>Статья 4.2</strong> Разделение смен на дневную (11:00 - 22:00) и ночную (22:00 - 11:00).</p>
+            <p><strong>Статья 4.3</strong> Перерывы допускаются в рамках регламента (до 2 часов в день).</p>
+            
+            <h3>ГЛАВА 5. СВИДАНИЯ</h3>
+            <p><strong>Статья 5.1</strong> Свидания разрешены сотрудникам с должности «Младший надзиратель» (5+).</p>
+            <p><strong>Статья 5.2</strong> Свидания проходят с 14:00 до 18:00.</p>
+            <p><strong>Статья 5.3</strong> Обязательный обыск посетителя перед свиданием.</p>
+        </div>
     </div>
 </body>
 </html>
