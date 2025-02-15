@@ -12,6 +12,8 @@
             background-color: #121212;
             color: white;
             display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .header {
             font-size: 36px;
@@ -25,6 +27,25 @@
             left: 0;
             z-index: 1000;
         }
+        .menu-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 80px;
+            flex-wrap: wrap;
+        }
+        .menu-buttons a {
+            padding: 10px 20px;
+            background: #ff8c00;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .menu-buttons a:hover {
+            background: #ffa500;
+            transform: scale(1.1);
+        }
         .sidebar {
             width: 60px;
             background: #1c1c1c;
@@ -36,6 +57,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            top: 0;
+            left: 0;
+            padding-top: 80px;
         }
         .sidebar:hover {
             width: 250px;
@@ -61,8 +85,7 @@
         }
         .content {
             margin-left: 80px;
-            padding: 80px 20px;
-            flex-grow: 1;
+            padding: 100px 20px;
             max-width: 900px;
         }
         .charter {
@@ -87,8 +110,9 @@
     </script>
 </head>
 <body>
-    <div class="sidebar">
-        <h3>Меню</h3>
+    <div class="header">Устав SASPA</div>
+    
+    <div class="menu-buttons">
         <a href="index.html">Главная</a>
         <a href="structure.html">Структура</a>
         <a href="charter.html">Устав</a>
@@ -97,8 +121,17 @@
         <a href="visits.html">Посещения</a>
         <a href="employment.html">Трудоустройство</a>
     </div>
+    
+    <div class="sidebar">
+        <h3>Навигация</h3>
+        <a href="#chapter1" onclick="scrollToChapter('chapter1')">Глава 1</a>
+        <a href="#chapter2" onclick="scrollToChapter('chapter2')">Глава 2</a>
+        <a href="#chapter3" onclick="scrollToChapter('chapter3')">Глава 3</a>
+        <a href="#chapter4" onclick="scrollToChapter('chapter4')">Глава 4</a>
+        <a href="#chapter5" onclick="scrollToChapter('chapter5')">Глава 5</a>
+    </div>
+    
     <div class="content">
-        <div class="header">Устав SASPA</div>
         <div class="charter">
             <h2>Устав SASPA</h2>
             <h3 id="chapter1">ГЛАВА 1. ОБЩИЕ ПОЛОЖЕНИЯ</h3>
