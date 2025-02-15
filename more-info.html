@@ -14,6 +14,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
         }
         .header {
             font-size: 36px;
@@ -95,6 +98,12 @@
             background-color: #ff7f00;
             color: white;
         }
+        /* Центрирование кнопки */
+        .cta-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
@@ -163,7 +172,10 @@
             <h3>Вывод</h3>
             <p>Программа реабилитации в Федеральной тюрьме добилась значительного успеха. Благодаря сочетанию образовательных программ, профессиональной подготовки и консультационных услуг мы успешно помогли заключенным развить новые навыки, обрести уверенность в себе и подготовиться к успешной реинтеграции в общество. Программа не только снизила уровень рецидивизма , но и положительно повлияла на жизнь заключенных, их семей и общества в целом. Мы полны решимости продолжать эту важную работу и оказывать заключенным поддержку, необходимую им для построения лучшего будущего.</p>
 
-            <a href="apply.html" class="cta-button" target="_blank">Оставить заявку</a>
+            <!-- Центрированная кнопка -->
+            <div class="cta-button-container">
+                <a href="https://forms.gle/x2VVC25MdoNUJ2VN9" class="cta-button" target="_blank">Оставить заявку</a>
+            </div>
         </div>
     </div>
 </body>
