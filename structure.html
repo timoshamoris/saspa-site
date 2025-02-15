@@ -16,8 +16,26 @@
         .header {
             font-size: 36px;
             font-weight: bold;
-            padding: 50px 20px;
+            padding: 20px;
             background: #1c1c1c;
+        }
+        .nav {
+            background: #222;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: background 0.3s;
+        }
+        .nav a:hover {
+            background: #444;
+            border-radius: 5px;
         }
         .container {
             padding: 40px;
@@ -32,17 +50,25 @@
         .section:hover {
             transform: translateY(-5px);
         }
-        .cop { background-color: #4a2c6d; }
-        .di { background-color: #8b0000; }
-        .psd { background-color: #1e3a8a; }
-        .dpp { background-color: #c71585; }
-        .hr { background-color: #b8860b; color: black; }
-        .pa { background-color: #d2691e; }
-        .rd { background-color: #2e8b57; }
+        .cop { background-color: #3a2455; }
+        .di { background-color: #6b0000; }
+        .psd { background-color: #162d65; }
+        .dpp { background-color: #a3126f; }
+        .hr { background-color: #8b6c0a; color: black; }
+        .pa { background-color: #a3561a; }
+        .rd { background-color: #236847; }
     </style>
 </head>
 <body>
     <div class="header">Структура SASPA</div>
+    <div class="nav">
+        <a href="index.html">Главная</a>
+        <a href="employment.html">Трудоустройство</a>
+        <a href="rules.html">Устав</a>
+        <a href="legal_rehab.html">Юридическая Реабилитация</a>
+        <a href="doctrine.html">Доктрина наказаний</a>
+        <a href="visits.html">Посещения</a>
+    </div>
     <div class="container">
         <div class="section cop">
             <h2>Chief's Office Prison [COP]</h2>
