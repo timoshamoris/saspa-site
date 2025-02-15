@@ -3,160 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Структура - SASPA</title>
+    <title>San Andreas State Prison Authority</title>
+    <link href="https://fonts.googleapis.com/css2?family=consolas:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'consolas', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212;
+            background-color: #0d0d0d;
             color: white;
             text-align: center;
         }
         .header {
             font-size: 36px;
             font-weight: bold;
-            padding: 20px;
-            background: #1c1c1c;
+            padding: 100px 20px;
+            background: url('https://i.imgur.com/1RKoO4H.png') center/cover no-repeat;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
-        .nav {
-            background: #222;
-            padding: 10px;
+        .menu {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            background: #1a1a1a;
+            padding: 20px;
         }
-        .nav a {
+        .menu a {
             color: white;
             text-decoration: none;
+            margin: 0 15px;
             font-size: 18px;
-            padding: 10px 15px;
-            transition: transform 0.3s, background 0.3s, color 0.3s;
+            padding: 12px 25px;
+            background: #222;
             border-radius: 5px;
+            transition: all 0.3s ease;
         }
-        .nav a:hover {
-            background: #ff8c00;
-            color: black;
+        .menu a:hover {
+            background: #ff9900;
+            color: #0d0d0d;
             transform: scale(1.1);
         }
         .container {
             padding: 40px;
         }
         .section {
-            margin-bottom: 30px;
-            padding: 20px;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #1a1a1a;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 4px 10px rgba(255, 153, 0, 0.5);
             transition: transform 0.3s;
         }
         .section:hover {
             transform: translateY(-5px);
         }
-        .cop { background-color: #3b2648; }
-        .di { background-color: #6a1b1b; }
-        .psd { background-color: #1c3d66; }
-        .dpp { background-color: #992a5b; }
-        .hr { background-color: #8a6b12; color: black; }
-        .pa { background-color: #a3542f; }
-        .rd { background-color: #285a42; }
-        
-        /* Стили для всплывающего окна */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            justify-content: center;
-            align-items: center;
+        .button-link {
+            color: #ff9900;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 12px 25px;
+            border: 2px solid #ff9900;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s ease;
         }
-        .modal-content {
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
-            width: 50%;
-            text-align: center;
+        .button-link:hover {
+            background: #ff9900;
+            color: #0d0d0d;
         }
-        .modal-content input, .modal-content button {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
+        .footer {
+            margin-top: 40px;
             padding: 10px;
+            background: #1a1a1a;
+            color: #aaa;
+            font-size: 14px;
+        }
+        h1, h2, h3 {
+            font-family: 'consolas', sans-serif;
+            font-weight: 700;
+        }
+        p {
+            font-family: 'consolas', sans-serif;
+            font-weight: 400;
         }
     </style>
 </head>
 <body>
-    <div class="header">Структура SASPA</div>
-    <div class="nav">
+    <div class="header">San Andreas State Prison Authority</div>
+    <div class="menu">
         <a href="index.html">Главная</a>
-        <a href="employment.html">Трудоустройство</a>
-        <a href="rules.html">Устав</a>
-        <a href="legal_rehab.html">Юридическая Реабилитация</a>
-        <a href="doctrine.html">Доктрина наказаний</a>
+        <a href="structure.html">Структура</a>
+        <a href="charter.html">Устав</a>
+        <a href="legal-rehabilitation.html">Юридическая Реабилитация</a>
+        <a href="punishment-doctrine.html">Доктрина наказаний</a>
         <a href="visits.html">Посещения</a>
-        <a href="#" onclick="openModal()">Перейти к заявке</a>
+        <a href="employment.html">Трудоустройство</a>
     </div>
     <div class="container">
-        <div class="modal" id="modal">
-            <div class="modal-content">
-                <h2>Заявка на УДО</h2>
-                <input type="text" id="name" placeholder="Имя Фамилия">
-                <input type="text" id="email" placeholder="Почта (discord@sa.com)">
-                <input type="text" id="crimes" placeholder="Статьи осуждения">
-                <button onclick="submitForm()">Отправить</button>
-                <button onclick="closeModal()">Закрыть</button>
-            </div>
+        <div id="udo" class="section">
+            <h2>Заявка на УДО</h2>
+            <p>Если вы соответствуете требованиям, вы можете подать заявку на условно-досрочное освобождение.</p>
+            <a class="button-link" href="https://docs.google.com/forms/d/e/1FAIpQLSchAs5llhBuau7gCuGl9Gdojk1GoODxu2uaTWSadR9FqWjRZw/viewform" target="_blank">Перейти к заявке</a>
+        </div>
+        <div id="leadership" class="section">
+            <h2>Руководство</h2>
+            <p>Наши руководители обеспечивают строгий порядок и соблюдение закона.</p>
+            <p>Директор: Timofey Om</p>
+            <p>Заместитель директора: Damir Morzh и прочие его фанаты</p>
         </div>
     </div>
-
-    <script>
-        function openModal() {
-            document.getElementById("modal").style.display = "flex";
-        }
-        function closeModal() {
-            document.getElementById("modal").style.display = "none";
-        }
-        function submitForm() {
-            const webhookURL = "https://discord.com/api/webhooks/1340305173641166901/7dI0gFWBwij39yo6CUDubo0_UmlABmBRtG7dn7y3cEfEjNVoX1fnaMW6CGFAyBCYW0jU";
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const crimes = document.getElementById("crimes").value;
-            
-            if (!name || !email || !crimes) {
-                alert("Пожалуйста, заполните все поля");
-                return;
-            }
-            
-            const payload = {
-                username: "SASPA Application",
-                avatar_url: "https://cdn.discordapp.com/attachments/1061624601081290762/1061624628159725578/30.jpg",
-                embeds: [{
-                    title: "Новая заявка на УДО",
-                    color: 16711680,
-                    fields: [
-                        { name: "Имя Фамилия", value: name, inline: false },
-                        { name: "Почта", value: email, inline: false },
-                        { name: "Статьи осуждения", value: crimes, inline: false }
-                    ],
-                    footer: { text: "SASPA UDO Application" },
-                    timestamp: new Date().toISOString()
-                }]
-            };
-
-            fetch(webhookURL, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload)
-            })
-            .then(() => {
-                alert("Заявка отправлена!");
-                closeModal();
-            })
-            .catch(err => console.error("Ошибка: ", err));
-        }
-    </script>
+    <div class="footer">
+        by Timofey Om
+    </div>
 </body>
 </html>
