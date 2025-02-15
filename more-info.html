@@ -98,28 +98,26 @@
             background-color: #ff7f00;
             color: white;
         }
-        /* Центрирование кнопки */
-        .cta-button-container {
+        .menu-buttons {
             display: flex;
             justify-content: center;
-            margin-top: 50px;
+            gap: 10px;
+            margin-top: 80px;
+            flex-wrap: wrap;
         }
-        /* Стили для кнопки "Назад" */
-        .back-button {
-            padding: 12px 30px;
-            background-color: #222;
+        .menu-buttons a {
+            padding: 12px 25px;
+            background: #222;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            transition: background 0.3s, color 0.3s, transform 0.3s;
             font-size: 18px;
             font-weight: bold;
             text-transform: uppercase;
-            transition: background 0.3s, color 0.3s, transform 0.3s;
-            margin-top: 20px;
-            margin-bottom: 20px;
         }
-        .back-button:hover {
-            background-color: #ff9900;
+        .menu-buttons a:hover {
+            background: #ff9900;
             color: #0d0d0d;
             transform: scale(1.1);
         }
