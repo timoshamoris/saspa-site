@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Структура - SASPA</title>
+    <title>Устав SASPA</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Consolas, monospace;
             margin: 0;
             padding: 0;
             background-color: #121212;
@@ -20,20 +20,31 @@
             background: #1c1c1c;
             text-align: center;
             width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
         .sidebar {
-            width: 250px;
+            width: 60px;
             background: #1c1c1c;
             padding: 20px;
             position: fixed;
             height: 100%;
             overflow: hidden;
             transition: width 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .sidebar:hover {
-            width: 300px;
+            width: 250px;
         }
         .sidebar h3 {
+            display: none;
+        }
+        .sidebar:hover h3 {
+            display: block;
             margin-bottom: 10px;
         }
         .sidebar a {
@@ -42,14 +53,15 @@
             text-decoration: none;
             padding: 10px 0;
             transition: color 0.3s;
+            white-space: nowrap;
         }
         .sidebar a:hover {
             text-decoration: underline;
             color: #ffa500;
         }
         .content {
-            margin-left: 270px;
-            padding: 20px;
+            margin-left: 80px;
+            padding: 80px 20px;
             flex-grow: 1;
             max-width: 900px;
         }
@@ -76,15 +88,17 @@
 </head>
 <body>
     <div class="sidebar">
-        <h3>Навигация</h3>
-        <a href="#" onclick="scrollToChapter('chapter1')">Глава 1</a>
-        <a href="#" onclick="scrollToChapter('chapter2')">Глава 2</a>
-        <a href="#" onclick="scrollToChapter('chapter3')">Глава 3</a>
-        <a href="#" onclick="scrollToChapter('chapter4')">Глава 4</a>
-        <a href="#" onclick="scrollToChapter('chapter5')">Глава 5</a>
+        <h3>Меню</h3>
+        <a href="index.html">Главная</a>
+        <a href="structure.html">Структура</a>
+        <a href="charter.html">Устав</a>
+        <a href="legal-rehabilitation.html">Юридическая Реабилитация</a>
+        <a href="punishment-doctrine.html">Доктрина наказаний</a>
+        <a href="visits.html">Посещения</a>
+        <a href="employment.html">Трудоустройство</a>
     </div>
     <div class="content">
-        <div class="header">Структура SASPA</div>
+        <div class="header">Устав SASPA</div>
         <div class="charter">
             <h2>Устав SASPA</h2>
             <h3 id="chapter1">ГЛАВА 1. ОБЩИЕ ПОЛОЖЕНИЯ</h3>
@@ -93,10 +107,11 @@
             
             <h3 id="chapter2">ГЛАВА 2. ОБЯЗАННОСТИ СОТРУДНИКОВ</h3>
             <p><strong>Статья 2.1</strong> Сотрудники обязаны соблюдать внутренний устав и законодательство штата.</p>
+            <p><strong>Статья 2.2</strong> <span class="note">Примечание: Начальник тюрьмы и Заместители могут отступить от положений устава.</span></p>
             
             <h3 id="chapter3">ГЛАВА 3. ЗАПРЕТЫ ДЛЯ СОТРУДНИКОВ</h3>
             <p><strong>Статья 3.1</strong> Сотрудникам Федеральной тюрьмы запрещено выходить в отпуск без одобрения его начальства.</p>
-            <p><strong>Статья 3.2</strong> Сотрудникам запрещено причинять физический и возможный психологический вред заключенным без веских на то оснований. <span class="warning">➥При нарушении выдается устный выговор</span></p>
+            <p><strong>Статья 3.2</strong> Сотрудникам запрещено причинять вред заключенным без веских оснований. <span class="warning">➥При нарушении выдается устный выговор</span></p>
             
             <h3 id="chapter4">ГЛАВА 4. РАСПОРЯДОК РАБОЧЕГО ДНЯ</h3>
             <p><strong>Статья 4.1</strong> Работник обязан находиться на рабочем месте...</p>
